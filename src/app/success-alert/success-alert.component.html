@@ -1,1 +1,15 @@
-<h1>Success alert works!</h1>
+<h1>{{test}}</h1>
+<h1>{{test1}}</h1>
+<h1>{{getAge()}}</h1>
+
+<!-- <button type="button" class="btn btn-primary" [disabled]="!disableTest">Primary</button> -->
+<!-- <button type="button" class="btn btn-primary" disabled>Primary</button> -->
+
+<!-- <p [innerText]="test"></p> -->
+
+<button type="button" class="btn btn-primary" [disabled]="disableTest">Primary</button>
+<button type="button" class="btn btn-danger" (click)="btnDisabled()">Danger</button>
+
+<input type="text" class="form-control" (input)="onUpdateText($event)">
+
+<h1>{{nishu}}</h1>
