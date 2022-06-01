@@ -51,7 +51,7 @@ export class DataBindingTestComponent {
   getInputData(event:any){
     this.tutorialEvent = event.target.value;
 
-    if(this.tutorialEvent ==''){
+    if(!this.tutorialEvent){
       this.disabledTestTutorial = true;
     }else{
       this.disabledTestTutorial = false;
