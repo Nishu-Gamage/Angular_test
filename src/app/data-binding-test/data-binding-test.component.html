@@ -1,0 +1,63 @@
+<!--------------------------------------- 
+          String interpolation 
+----------------------------------------->
+
+<!-- String interpolation - Variable -->
+<h1>{{test1}}</h1>
+<h1>{{test2}}</h1>
+
+<!-- String interpolation - Function -->
+<h1>{{getAge()}}</h1>
+
+
+
+<!--------------------------------------- 
+          Property binding 
+----------------------------------------->
+<button type="button" class="btn btn-primary" [disabled]="disabledTest1">Primary</button>
+<button type="button" class="btn btn-primary" [disabled]="disabledTest2">Primary</button>
+
+<!-- Property binding  ―　.innerText -->
+<h1 [innerText]="test1"></h1>
+
+
+
+<!--------------------------------------- 
+          Event binding 
+----------------------------------------->
+
+<!-- Property bound btn -->
+<button type="button" class="btn btn-primary" [disabled]="disabledTest3">Primary</button>
+
+<!-- Event binding btn -->
+<button type="button" class="btn btn-danger" (click)="btnDisable()">Danger</button>
+<h2></h2>
+
+<!-- Event binding ー　Input -->
+<input type="text" class="formcontrol" (input)="onUpdateText($event)">
+<!-- Print Input Value -->
+<h2>{{inputEventTest}}</h2>
+
+
+
+
+<!--------------------------------------- 
+               Tutorial
+----------------------------------------->
+<H2>{{Tutorial}}</H2>
+<!-- Insert data -->
+<input type="text" value="{{tutorialEvent}}" id="Tutorialinput" (input)="getInputData($event)">
+
+<div class="row mt-5">
+     <div class="col-md-6">
+          <!-- display inputs -->
+          <h2 class="para">{{tutorialEvent}}</h2>
+     </div> 
+     <div class="col-md-6">
+          <!-- activate btn when inserting data -->
+          <button type="button" class="btn btn-danger cssbtn" [disabled]="disabledTestTutorial">activate btn</button>
+     </div>
+</div>    
+
+<!-- reset input when the button is clicked -->
+<button type="button" class="btn btn-primary btn-lg"(click)="clearInputs()">　Reset btn　</button>

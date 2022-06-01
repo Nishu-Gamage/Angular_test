@@ -1,0 +1,14 @@
+h1{
+     background-color: rgb(14, 5, 22);
+     color: white;
+     padding: 5px;
+     /* height:100px; */
+}
+
+.para{
+     background-color: aqua;
+     padding: 15px;
+}
+.cssbtn{
+     margin-top: 20px;
+}
