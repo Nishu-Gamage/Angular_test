@@ -92,3 +92,14 @@
      class="btn btn-danger" 
      [disabled]="tutorial2===''"
      (click)="tutorial2 = ''" > Reset </button>
+
+     
+<!--------------------------------------- 
+               Tutorial - 3
+           Two-way data binding          
+----------------------------------------->
+
+<div class="container">
+     <h1 [ngStyle]="{backgroundColor:'yellow'}">Style editing 1</h1>
+     <h1 [ngStyle]="{backgroundColor: getColor()}">Style editing 2</h1>
+</div>

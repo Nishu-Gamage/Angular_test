@@ -18,11 +18,11 @@ export class DataBindingTestComponent {
   disabledTest1 = false;
   disabledTest2 = true;
 
-  constructor(){
-    setTimeout(()=>{
-        this.disabledTest1 = true;
-    }, 2000)
-  }
+  // constructor(){
+  //   setTimeout(()=>{
+  //       this.disabledTest1 = true;
+  //   }, 2000)
+  // }
 
   // Event binding
   disabledTest3 =false;
@@ -75,8 +75,23 @@ export class DataBindingTestComponent {
   tutorial2 = '';
 
 
+  
+  /*----------------------------------
+  　　　      Tutorial - 3
+             Style editing
+  -----------------------------------*/
 
+  // Create rendom number
+  status:string = 'offline';
+  
+  // This constructor can use only for this tutorial
+  // line 21 also have constructor
+  constructor(){
+    this.status = Math.random()>0.5?'online':'offline';
+  }
 
-
-
+  getColor(){
+    return this.status === 'online'?'green':'red';
+  }
+  
 }

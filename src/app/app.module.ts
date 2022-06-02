@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SuccessAlert } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { DataBindingTestComponent } from './data-binding-test/data-binding-test.component';
+import { ControlStatmentComponent } from './control-statment/control-statment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SuccessAlert,
     WarningAlertComponent,
-    DataBindingTestComponent
+    DataBindingTestComponent,
+    ControlStatmentComponent
   ],
   imports: [
     BrowserModule,

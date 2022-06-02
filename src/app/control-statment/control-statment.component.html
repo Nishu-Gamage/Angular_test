@@ -1,0 +1,13 @@
+<!---------------------------- 
+     if statement
+ ---------------------------->
+<h1 *ngIf="iftest">{{text1}}</h1>
+
+
+<!---------------------------- 
+     if else statement 
+----------------------------->
+<h1 *ngIf="ifElseTest; else HellowTemplate">{{text2}}</h1>
+<!-- template for else part -->
+<ng-template #HellowTemplate><h1>Hellow</h1></ng-template>
+
