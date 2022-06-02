@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SuccessAlert } from './success-alert/success-alert.component';
@@ -14,7 +15,8 @@ import { DataBindingTestComponent } from './data-binding-test/data-binding-test.
     DataBindingTestComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

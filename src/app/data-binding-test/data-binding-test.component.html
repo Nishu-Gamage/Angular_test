@@ -3,11 +3,11 @@
 ----------------------------------------->
 
 <!-- String interpolation - Variable -->
-<h1>{{test1}}</h1>
-<h1>{{test2}}</h1>
+<h3>{{test1}}</h3>
+<h3>{{test2}}</h3>
 
 <!-- String interpolation - Function -->
-<h1>{{getAge()}}</h1>
+<h3>{{getAge()}}</h3>
 
 
 
@@ -18,7 +18,7 @@
 <button type="button" class="btn btn-primary" [disabled]="disabledTest2">Primary</button>
 
 <!-- Property binding  ―　.innerText -->
-<h1 [innerText]="test1"></h1>
+<h3 [innerText]="test1"></h3>
 
 
 
@@ -34,19 +34,31 @@
 <h2></h2>
 
 <!-- Event binding ー　Input -->
-<input type="text" class="formcontrol" (input)="onUpdateText($event)">
+<input type="text" class="form-control" (input)="onUpdateText($event)">
 <!-- Print Input Value -->
 <h2>{{inputEventTest}}</h2>
 
 
 
+<!--------------------------------------- 
+         Two-way data binding 
+----------------------------------------->
+<!-- Insert value to variable -->
+<input type="text" class="form-control" [(ngModel)] = 'twoWayModelTest'>
+<!-- Print Input Value variable -->
+<h2>{{twoWayModelTest}}</h2>
+
+
+
+
 
 <!--------------------------------------- 
-               Tutorial
+               Tutorial - 1
+     Property binding・Event binding          
 ----------------------------------------->
 <H2>{{Tutorial}}</H2>
 <!-- Insert data -->
-<input type="text" value="{{tutorialEvent}}" id="Tutorialinput" (input)="getInputData($event)">
+<input type="text" class="form-control" value="{{tutorialEvent}}" id="Tutorialinput" (input)="getInputData($event)">
 
 <div class="row mt-5">
      <div class="col-md-6">
@@ -61,3 +73,22 @@
 
 <!-- reset input when the button is clicked -->
 <button type="button" class="btn btn-primary btn-lg"(click)="clearInputs()">　Reset btn　</button>
+
+
+<!--------------------------------------- 
+               Tutorial - 2
+           Two-way data binding          
+----------------------------------------->
+<H2>{{Tutorial}}</H2>
+
+<!-- Insert value to variable -->
+<input type="text" class="form-control" [(ngModel)]="tutorial2">
+
+<!-- Print inserted value -->
+<h3>{{tutorial2}}</h3>
+
+<!-- Set Reset button -->
+<button type="button" 
+     class="btn btn-danger" 
+     [disabled]="tutorial2===''"
+     (click)="tutorial2 = ''" > Reset </button>

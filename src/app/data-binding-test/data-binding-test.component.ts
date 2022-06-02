@@ -36,14 +36,16 @@ export class DataBindingTestComponent {
     console.log(event);
     this.inputEventTest = event.target.value;
   }
+
+  // Two-way data binding
+  twoWayModelTest:string = '';
+
+
   
-
-
-
-  
-/*----------------------
-　　　　Tutorial
-----------------------*/
+/*----------------------------------
+　　　      Tutorial - 1
+  Property binding・Event binding
+-----------------------------------*/
 
   disabledTestTutorial = true;
   tutorialEvent ='';
@@ -62,6 +64,19 @@ export class DataBindingTestComponent {
     this.tutorialEvent='';
     this.disabledTestTutorial = true;
   }
+
+
+  
+/*----------------------------------
+　　　      Tutorial - 2
+        Two-way data binding 
+-----------------------------------*/
+
+  tutorial2 = '';
+
+
+
+
 
 
 }
