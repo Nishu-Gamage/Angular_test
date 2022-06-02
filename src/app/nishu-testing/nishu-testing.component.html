@@ -1,0 +1,19 @@
+<div class="container">
+     <table class="table">
+          <thead>
+               <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+               </tr>
+          </thead>
+          <tbody>
+               <tr *ngFor="let employee of employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.email}}</td>
+                    <td><button type="button" class="btn btn-danger">Button</button></td>
+               </tr>
+          </tbody>
+     </table>
+</div>

@@ -7,6 +7,7 @@ import { SuccessAlert } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { DataBindingTestComponent } from './data-binding-test/data-binding-test.component';
 import { ControlStatmentComponent } from './control-statment/control-statment.component';
+import { NishuTestingComponent } from './nishu-testing/nishu-testing.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ControlStatmentComponent } from './control-statment/control-statment.co
     SuccessAlert,
     WarningAlertComponent,
     DataBindingTestComponent,
-    ControlStatmentComponent
+    ControlStatmentComponent,
+    NishuTestingComponent
   ],
   imports: [
     BrowserModule,
