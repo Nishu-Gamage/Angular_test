@@ -12,7 +12,7 @@ export class ControlStatmentComponent implements OnInit {
     iftest = true;
 
   // if else statement variable 
-    text2 = 'if else statement testing';
+    text2 = 'if else statement true testing';
     ifElseTest = false;
 
 
