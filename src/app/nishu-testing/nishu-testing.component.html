@@ -66,10 +66,18 @@
                          [style.visibility]="regisbtn1 ? 'visible' : 'hidden'"
                          >Registration start</button>
                     <!-- Reset btn  -->
-                    <button type="button" class="btn btn-danger"(click)="resetFunction()">Reset</button>
+                    <button type="button" class="btn btn-danger"
+                         (click)="resetFunction()"
+                         [style.visibility]="resetbtn1 ? 'visible' : 'hidden'"
+                         >Reset</button>
+               </div>
+               <div class="text-center">
+                    <button type="button" class="btn btn-danger btn-lg"
+                         (click)="resetFunction()"
+                         [style.visibility]="resetbtn2 ? 'visible' : 'hidden'"
+                         >　Reset　</button>
                </div>
           </div>
-                    
 
           <!-- Confirmation table test  -->
           <div [style.visibility]="confirmationtable ? 'visible' : 'hidden'" class="text-danger text-center">   

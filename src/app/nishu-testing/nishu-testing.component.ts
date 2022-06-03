@@ -53,6 +53,8 @@ export class NishuTestingComponent implements OnInit {
   regisError = false;
   confirmationtable = false;
   regisbtn1 = true;
+  resetbtn1 = true;
+  resetbtn2 = false;
 
   // Reset btn
   resetFunction(){
@@ -63,6 +65,8 @@ export class NishuTestingComponent implements OnInit {
     this.regisError = false;
     this.confirmationtable = false;
     this.regisbtn1 = true;
+    this.resetbtn1 = true;
+    this.resetbtn2 = false;
   }
 
   // Login btn 
@@ -73,6 +77,8 @@ export class NishuTestingComponent implements OnInit {
       this.confirmationtable = true;
       this.regisError = false;
       this.regisbtn1 = false;
+      this.resetbtn1 = false;
+      this.resetbtn2 = true;
     }
   }
 
