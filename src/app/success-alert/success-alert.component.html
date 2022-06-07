@@ -1,1 +1,9 @@
 <h1>Success alert works!</h1>
+
+<h1 [ngStyle]="{backgroundColor:'yellow'}" 
+    [ngClass]="{online:test==='nishu'}">Style editing 1</h1>
+
+<div *ngFor="let a of loopTest; let i = index">
+    <h1>{{a}}</h1>
+    <h1>{{i}}</h1>
+</div>

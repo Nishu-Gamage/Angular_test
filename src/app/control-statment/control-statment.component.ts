@@ -15,6 +15,8 @@ export class ControlStatmentComponent implements OnInit {
     text2 = 'if else statement true testing';
     ifElseTest = false;
 
+    
+
 
   constructor() { }
 
