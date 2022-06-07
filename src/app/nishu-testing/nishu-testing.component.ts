@@ -102,12 +102,25 @@ export class NishuTestingComponent implements OnInit {
   }
   // Registration confirm btn 
   regisConfirmFunction(){    
-    this.registrationForm = true;
-    this.confirmationtable = false;
-    this.resetbtn2 = false;
-    this.loginForm = true;
-    this.loginbtn = false;
-    this.loginReset = false;
+    if(this.pass1!= this.pass2 || this.pass2 =='Error'){
+      this.userName = '';
+      this.pass1 = '';
+      this.pass2 = '';
+      this.age = '';
+      this.regisError = false;
+      this.regisUserError = false;
+      this.confirmationtable = false;
+      this.regisbtn1 = true;
+      this.resetbtn1 = true;
+      this.resetbtn2 = false;
+    } else {
+      this.registrationForm = true;
+      this.confirmationtable = false;
+      this.resetbtn2 = false;
+      this.loginForm = true;
+      this.loginbtn = false;
+      this.loginReset = false;
+    }      
   }
 
   // Login btn 
