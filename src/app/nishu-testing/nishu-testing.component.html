@@ -19,8 +19,8 @@
      </table>
 </div> -->
 
-<h1>{{title2}}</h1>
-<div class="container">
+<div class="container" [style.visibility]="registrationForm ? 'hidden' : 'visible'">
+     <h1>{{title2}}</h1>
      <div class="container-fluid">
           <div class="row userName">
                <div class="col-md-3"><h4>{{inputtitle1}}</h4></div>
@@ -54,10 +54,14 @@
 
           <!-- Input Error  -->
           <div [style.visibility]="regisError ? 'visible' : 'hidden'" class="text-danger text-center">
-               <h4><b>{{RegisDataError}}</b></h4>
+               <h4><b>{{regisDataError}}</b></h4>
+          </div>
+          <!-- User Id Error -->
+          <div [style.visibility]="regisUserError ? 'visible' : 'hidden'" class="text-danger text-center">
+               <h4><b>{{userNameError}}</b></h4>
           </div>
 
-          <!-- btn  -->
+          <!-- btn -->
           <div class="row button">
                <div class="text-center">
                     <!-- Regis btn 1 -->
@@ -65,7 +69,7 @@
                          (click)="regisFunction()"
                          [style.visibility]="regisbtn1 ? 'visible' : 'hidden'"
                          >Registration start</button>
-                    <!-- Reset btn  -->
+                    <!-- Reset btn -->
                     <button type="button" class="btn btn-danger"
                          (click)="resetFunction()"
                          [style.visibility]="resetbtn1 ? 'visible' : 'hidden'"
@@ -85,7 +89,7 @@
                <div class="container">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
-                         <table class="table table-dark">
+                         <table class="table">
                               <thead class="thead-dark">
                                    <tr>
                                         <th><h5>{{inputtitle1}}</h5></th>
@@ -93,14 +97,16 @@
                                         <th><h5>{{inputtitle4}}</h5></th>
                                    </tr>
                               </thead>
-                              <tbody>
+                              <tbody class="text-left">
                                    <td><h3>{{userName}}</h3></td>
                                    <td><h3 *ngIf="pass1===pass2; else Error">{{pass2}}</h3></td>
                                    <ng-template #Error><h3 class="text-danger"><b>Error</b></h3></ng-template>
                                    <td><h3>{{age}}</h3></td>
                               </tbody>
                          </table>
-                         <button type="button" class="btn btn-primary btn-lg">Confirm Registration</button>
+                         <button type="button" class="btn btn-primary btn-lg"
+                              (click)="regisConfirmFunction()"                         
+                         >Confirm Registration</button>
                     </div>
                     <div class="col-md-3"></div>
                </div>
@@ -109,4 +115,53 @@
 </div>
 
 
-              
+<!-- Login Form -->
+<div class="container login-form" [style.visibility]="loginForm ? 'visible' : 'hidden'">
+     <div class=""><h1>Login Form</h1></div>
+     <!-- login Inputs -->
+     <div class="container-fluid ">
+          <div class="row loginId">
+               <div class="col-md-3"><h4>{{inputtitle1}}</h4></div>
+               <div class="col-md-8"><input [(ngModel)]="loginInput1" type="text" class="form-control"></div>
+          </div>
+          <div class="row login-pass">
+               <div class="col-md-3"><h4>{{inputtitle2}}</h4></div>
+               <div class="col-md-8"><input [(ngModel)]="loginInput2" type="text" class="form-control"></div>
+          </div>
+     </div>
+     <!-- login Error --> 
+     <div [style.visibility]="loginError ? 'visible' : 'hidden'" class="text-danger text-center">
+          <h4><b>{{loginDataError}}</b></h4>
+     </div>
+     
+     <!-- login form btn  -->
+     <div class="row button">
+          <div class="text-center">
+               <!-- Regis btn 1 -->
+               <button type="button" class="btn btn-primary login-btn" 
+                    (click)="loginFunction()"
+                    [style.visibility]="loginbtn ? 'hidden' : 'visible'"
+                    >Login</button>
+               <!-- Reset btn  -->
+               <button type="button" class="btn btn-danger"
+                    (click)="loginresetFunction()"
+                    [style.visibility]="loginReset ? 'hidden' : 'visible'"
+                    >Reset</button>
+          </div>
+     </div>
+</div>              
+
+
+<div class="login-success text-center login-success-form" [style.visibility]="loginSuccess ? 'visible' : 'hidden'">
+     <div class="container-fluid">
+          <h1 class="text-center">Login Success</h1>
+          <div class="row">
+               <div class="col-md-6 text-right">
+                    <img src="/assets/nishu-testing-img/success-man.png" alt="">
+               </div>
+               <div class="col-md-6 text-left">
+                    <img src="/assets/nishu-testing-img/success.jpg" alt="">
+               </div>
+          </div>
+     </div>
+</div>

@@ -38,23 +38,37 @@ export class NishuTestingComponent implements OnInit {
   ageSelectr:SelectAge[] =[{ageValue:'10'}, {ageValue:'20'}, {ageValue:'30'}, {ageValue:'40'}, {ageValue:'50'}];
 
   // collect inputs variable
+  registedID = 'nishu';
   userName = '';
   pass1 = '';
   pass2 = '';
   age = '';
+  loginId = '';
+  loginPass = '';
+  loginInput1 = '';
+  loginInput2 = '';
+
 
   // Error messages
-  userNameError ='This name already exists. Please use a different User Name';
+  userNameError ='This Username already exists. Please use a different User Name';
   passError ='Check Confirmation password and password';
-  RegisDataError ='Please check your inputs and register again';
-  inputError ='';
+  regisDataError ='Please check your input and try again.';
+  loginDataError= 'Please check your input and try again.';
+  
 
-  // login Variable   
+  // Registration Variable   
   regisError = false;
+  regisUserError = false;
+  loginError = false;
+  registrationForm = false;
   confirmationtable = false;
+  loginSuccess = false;
+  loginForm = false;
   regisbtn1 = true;
   resetbtn1 = true;
   resetbtn2 = false;
+  loginbtn = true;
+  loginReset = true;
 
   // Reset btn
   resetFunction(){
@@ -63,24 +77,59 @@ export class NishuTestingComponent implements OnInit {
     this.pass2 = '';
     this.age = '';
     this.regisError = false;
+    this.regisUserError = false;
     this.confirmationtable = false;
     this.regisbtn1 = true;
     this.resetbtn1 = true;
     this.resetbtn2 = false;
   }
 
-  // Login btn 
+  // Registration btn 
   regisFunction(){
     if(!this.userName || !this.pass1 || !this.pass2 || !this.age || this.pass1!=this.pass2){ 
       this.regisError = true;
+    }else if(this.registedID == this.userName ){
+      this.regisError = false;
+      this.regisUserError = true;
     } else {
       this.confirmationtable = true;
       this.regisError = false;
+      this.regisUserError = false;
       this.regisbtn1 = false;
       this.resetbtn1 = false;
       this.resetbtn2 = true;
     }
   }
+  // Registration confirm btn 
+  regisConfirmFunction(){    
+    this.registrationForm = true;
+    this.confirmationtable = false;
+    this.resetbtn2 = false;
+    this.loginForm = true;
+    this.loginbtn = false;
+    this.loginReset = false;
+  }
+
+  // Login btn 
+  loginFunction(){
+    if(!this.loginInput1 || !this.loginInput2 || this.loginInput1!=this.userName || this.loginInput2!=this.pass2){
+      this.loginError = true;
+    } else {
+      this.loginError = false;
+      this.loginSuccess = true;
+      this.loginForm = false;
+      this.loginbtn = true;
+      this.loginReset = true;
+    }
+
+  }
+  // Login Reset btn 
+  loginresetFunction(){
+    this.loginInput1 = '';
+    this.loginInput2 = '';
+    this.loginError = false;
+  }
+
 
   constructor() { }
 
