@@ -14,13 +14,7 @@
 <h1>Tutorial 1</h1>
 
 <div class="container mt-5">
-     <!-- Display list data -->
-     <div class="text-center">          
-          <div *ngFor="let arrayInputs of listNumber;let i = index">
-               <h4>{{arrayInputs[i]}}</h4>
-          </div>
-     </div>
-
+     
      <!-- Display btn -->
      <div class="text-center mt-5 mb-5">
           <button type="button" class="btn btn-success btn-lg"
@@ -29,11 +23,22 @@
      </div>
 
      <!-- Display list data -->     
-     <div class="msg text-center" [ngStyle]="{backgroundColor:getbgColor() , color:getFColor()}">  
+     <div class="msg text-center">  
           <div [style.visibility]="manageOddMessage ? 'visible' : 'hidden'">
                <h1 *ngIf="oddcheck; else OddEvenCheckTemplate">{{evenMessage}}</h1>
                <ng-template #OddEvenCheckTemplate><h1>{{oddMessage}}</h1></ng-template>
           </div> 
      </div>
+
+     <!-- Display list data -->
+     <div class="text-center">          
+          <h4 style="display:inline" *ngFor="let arrayInputs of listNumber;" 
+               [ngStyle]="{backgroundColor:arrayInputs>5 ? getbgColor():'transparent', 
+               color:arrayInputs>5 ? getFColor(): 'black'}">{{arrayInputs}}</h4>
+     </div>
+
+
+     <h1 style="display:inline">inline</h1>
+     <h1 style="display:inline">Test</h1>
 
 </div>

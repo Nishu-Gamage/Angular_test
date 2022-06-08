@@ -10,7 +10,6 @@ export class TutorialOneComponent implements OnInit {
   //  Variables
   manageOddMessage = false;
   manageEvenMessage = false;
-  arrayIndex = 0;
   clickcount = 0;
   oddcheck = true;
  
@@ -26,10 +25,8 @@ export class TutorialOneComponent implements OnInit {
 
     // Display array list
     this.clickcount += 1;
-    this.listNumber.push({[this.arrayIndex]:[this.clickcount]});
+    this.listNumber.push(this.clickcount);
     console.log(this.listNumber);
-    this.arrayIndex += 1;
-
 
     // ODD EVEN Message display 
     this.manageOddMessage = true;
