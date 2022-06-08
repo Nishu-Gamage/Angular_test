@@ -1,0 +1,39 @@
+<!------------------------------------------------------------------------------------------------ 
+   *  Add numbers to the list when the button is clicked.
+   *  Display the numbers added to the list.
+   *  If the button is not clicked the paragraph will not show.
+   *  when the button is clicked show the paragraph, 
+          *  If the number count in the list is an even, show the paragraph as an even message.
+          *  If the number in the list is odd, show the paragraph as an odd message.
+   *  If the number of additions is greater than 5,
+          *  The background color will be blue.
+          *  The font color will be white.
+-------------------------------------------------------------------------------------------------->
+
+
+<h1>Tutorial 1</h1>
+
+<div class="container mt-5">
+     <!-- Display list data -->
+     <div class="text-center">          
+          <div *ngFor="let arrayInputs of listNumber;let i = index">
+               <h4>{{arrayInputs[i]}}</h4>
+          </div>
+     </div>
+
+     <!-- Display btn -->
+     <div class="text-center mt-5 mb-5">
+          <button type="button" class="btn btn-success btn-lg"
+               (click)="btnClicked()"
+               >Add Number to the list</button>
+     </div>
+
+     <!-- Display list data -->     
+     <div class="msg text-center" [ngStyle]="{backgroundColor:getbgColor() , color:getFColor()}">  
+          <div [style.visibility]="manageOddMessage ? 'visible' : 'hidden'">
+               <h1 *ngIf="oddcheck; else OddEvenCheckTemplate">{{evenMessage}}</h1>
+               <ng-template #OddEvenCheckTemplate><h1>{{oddMessage}}</h1></ng-template>
+          </div> 
+     </div>
+
+</div>

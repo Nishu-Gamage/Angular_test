@@ -8,6 +8,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { DataBindingTestComponent } from './data-binding-test/data-binding-test.component';
 import { ControlStatmentComponent } from './control-statment/control-statment.component';
 import { NishuTestingComponent } from './nishu-testing/nishu-testing.component';
+import { StyleTestComponent } from './style-test/style-test.component';
+import { TutorialOneComponent } from './tutorial-one/tutorial-one.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NishuTestingComponent } from './nishu-testing/nishu-testing.component';
     WarningAlertComponent,
     DataBindingTestComponent,
     ControlStatmentComponent,
-    NishuTestingComponent
+    NishuTestingComponent,
+    StyleTestComponent,
+    TutorialOneComponent
   ],
   imports: [
     BrowserModule,

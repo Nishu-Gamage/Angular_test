@@ -1,13 +1,27 @@
 <!---------------------------- 
      if statement
  ---------------------------->
-<!-- <h1 *ngIf="iftest">{{text1}}</h1> -->
+<h1 *ngIf="iftest">{{text1}}</h1>
 
 
 <!---------------------------- 
      if else statement 
 ----------------------------->
-<!-- <h1 *ngIf="ifElseTest; else HellowTemplate">{{text2}}</h1> -->
+<h1 *ngIf="ifElseTest; else HellowTemplate">{{text2}}</h1>
 <!-- template for else part -->
 <ng-template #HellowTemplate><h1>if else statement <b>false</b> testing</h1></ng-template>
 
+
+<!---------------------------- 
+          For Loop 
+----------------------------->
+<div *ngFor="let a of loopTest; let i = index">
+     <div class="row">
+          <div class="col-md-1">
+               <h3>{{i}}</h3>
+          </div>
+          <div class="col-md-3">
+               <h3>{{a}}</h3>
+          </div>
+     </div>
+</div>

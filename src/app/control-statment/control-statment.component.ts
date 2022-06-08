@@ -15,7 +15,8 @@ export class ControlStatmentComponent implements OnInit {
     text2 = 'if else statement true testing';
     ifElseTest = false;
 
-    
+  // For loop array  
+  loopTest = ['aaa', 'bbb' ,'ccc']; 
 
 
   constructor() { }
