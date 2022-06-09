@@ -1,0 +1,48 @@
+<!------------------------------------------------------------------------------------------------ 
+   *  Create Calculator
+-------------------------------------------------------------------------------------------------->
+
+
+<h1>Tutorial 2</h1>
+
+
+<div class="container">
+       <div class="result">
+              <h3 style="display:inline"
+                 *ngFor="let arrayInputs of num;">{{arrayInputs}}</h3>
+       </div> 
+       <!-- <h1>{{display}}</h1> -->
+
+       <div class="btn-set">
+              <div class="row mt-5">
+                     <div class="first-row">      
+                            <button class="btn btn-primary del" (click)="delClicked()">Del</button>                      
+                            <button class="btn btn-secondary" (click)="Oper3()" >%</button>                      
+                            <button class="btn btn-secondary" (click)="Oper1()" >+</button>  
+                     </div>
+                     <div class="second-row">      
+                            <button value="7" class="btn btn-dark" (click)="numBtnClicked(7)" >7</button>                      
+                            <button class="btn btn-dark" (click)="numBtnClicked(8)" >8</button>                      
+                            <button class="btn btn-dark" (click)="numBtnClicked(9)" >9</button>                      
+                            <button class="btn btn-secondary" (click)="Oper2()" >-</button>  
+                     </div>
+                     <div class="third-row">      
+                            <button class="btn btn-dark" (click)="numBtnClicked(4)" >4</button>                      
+                            <button class="btn btn-dark" (click)="numBtnClicked(5)" >5</button>                      
+                            <button class="btn btn-dark" (click)="numBtnClicked(6)" >6</button>                      
+                            <button class="btn btn-secondary" (click)="Oper4()" >x</button>  
+                     </div>
+                     <div class="fourth-row">      
+                            <button class="btn btn-dark" (click)="numBtnClicked(1)" >1</button>                      
+                            <button class="btn btn-dark" (click)="numBtnClicked(2)" >2</button>                      
+                            <button class="btn btn-dark" (click)="numBtnClicked(3)" >3</button>                     
+                            <button class="btn btn-secondary" (click)="Oper5()" >/</button>   
+                     </div>
+                     <div class="fifth-row">      
+                            <button class="btn btn-primary zero" (click)="numBtnClicked(0)" >0</button>                      
+                            <button class="btn btn-secondary" (click)="Oper6()" >.</button>                      
+                            <button class="btn btn-success" (click)="getResult()">＝</button>  
+                     </div>
+              </div>
+       </div>
+</div>

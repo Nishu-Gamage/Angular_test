@@ -1,0 +1,22 @@
+.container{
+     height: 400px;
+     width: 320px;
+     background-color:rgba(0, 149, 255, 0.616) ;
+}
+
+.result{
+     background-color: rgba(40, 35, 35, 0.923);
+     width:300px;
+     height:50px;
+     top: 10px;
+     margin: 10px auto;
+     position:relative; top:20px; ; 
+     text-align: right;
+     font-size: 25px;
+     color:#fff;
+     padding: 5px;
+}
+
+.row{ text-align: right; }
+.btn{ margin: 10px; width:50px }
+.del , .zero {width: 120px;}

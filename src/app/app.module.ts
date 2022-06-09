@@ -10,6 +10,7 @@ import { ControlStatmentComponent } from './control-statment/control-statment.co
 import { NishuTestingComponent } from './nishu-testing/nishu-testing.component';
 import { StyleTestComponent } from './style-test/style-test.component';
 import { TutorialOneComponent } from './tutorial-one/tutorial-one.component';
+import { TutorialTwoComponent } from './tutorial-two/tutorial-two.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TutorialOneComponent } from './tutorial-one/tutorial-one.component';
     ControlStatmentComponent,
     NishuTestingComponent,
     StyleTestComponent,
-    TutorialOneComponent
+    TutorialOneComponent,
+    TutorialTwoComponent
   ],
   imports: [
     BrowserModule,
