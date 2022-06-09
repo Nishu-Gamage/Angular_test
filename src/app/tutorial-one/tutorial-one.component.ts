@@ -12,19 +12,20 @@ export class TutorialOneComponent implements OnInit {
   manageEvenMessage = false;
   clickcount = 0;
   oddcheck = true;
- 
-  // Array  
-  listNumber:any = []; 
-
+  
   // Display messages
   oddMessage ='List numbers are ODD';
   evenMessage ='List numbers are EVEN';
+ 
+  // Array  
+  listNumber:any = []; 
 
   // Button Click Function 
   btnClicked(){
 
     // Display array list
     this.clickcount += 1;
+    // Add data to the array
     this.listNumber.push(this.clickcount);
     console.log(this.listNumber);
 

@@ -22,7 +22,7 @@
                >Add Number to the list</button>
      </div>
 
-     <!-- Display list data -->     
+     <!-- Display list count message -->     
      <div class="msg text-center">  
           <div [style.visibility]="manageOddMessage ? 'visible' : 'hidden'">
                <h1 *ngIf="oddcheck; else OddEvenCheckTemplate">{{evenMessage}}</h1>
@@ -30,15 +30,15 @@
           </div> 
      </div>
 
-     <!-- Display list data -->
+     <!-- Display array list data -->
      <div class="text-center">          
           <h4 style="display:inline" *ngFor="let arrayInputs of listNumber;" 
                [ngStyle]="{backgroundColor:arrayInputs>5 ? getbgColor():'transparent', 
-               color:arrayInputs>5 ? getFColor(): 'black'}">{{arrayInputs}}</h4>
+               color:arrayInputs>5 ? getFColor(): 'black'}">{{arrayInputs}}, </h4>
      </div>
 
 
-     <h1 style="display:inline">inline</h1>
+     <h1 style="display:inline">Inline</h1>
      <h1 style="display:inline">Test</h1>
 
 </div>
