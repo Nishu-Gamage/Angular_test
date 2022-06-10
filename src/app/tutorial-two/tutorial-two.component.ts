@@ -9,6 +9,7 @@ export class TutorialTwoComponent implements OnInit {
 
   // Variables
   display = 0;
+  // opr:String ="";
 
   // Arrays
   num:any = [];
@@ -20,15 +21,14 @@ export class TutorialTwoComponent implements OnInit {
   delClicked(){ this.num = [];  }
 
   // Operator btn function
-  Oper1(){ this.display = this.num.length, console.log(this.display) ,  this.num.push("+"); }
-  Oper2(){ this.num.push("-"); }
-  Oper3(){ this.num.push("%"); }
-  Oper4(){ this.num.push("x"); }  
-  Oper5(){ this.num.push("/"); }
-  Oper6(){ this.num.push("."); }
+  OperBtnClicked( opr:String ){
+      this.num.push(opr);
+  }
 
   // "=" btn get result function
-  getResult(){   }
+  getResult(){ 
+    this.num = ["Result"];
+  }
 
 
   constructor() { }
